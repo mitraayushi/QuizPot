@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    min-height: 100vh;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #f0f0f0;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Box Styling */
+.box-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.box-container h2 {
+    font-size: 24px;
+}
+
+.box-container div {
+    margin: 15px 0;
+}
+
+button {
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #6a11cb;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #dddddd;
+}
+
+button#next-question, button#submit-quiz {
+    margin-bottom: 20px;
+}
+
+/* Option Styling */
+input[type="radio"] {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+label {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Circle Progress */
+#circle-progress {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    border-top: 10px solid white;
+    animation: progress-animation 2s ease-out forwards;
+}
+
+#result-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+}
+
+@keyframes progress-animation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(calc(var(--score) * 3.6deg)); }
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #6a11cb;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    color: white;
+    align-content: center;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.popup-content input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.popup-content button {
+    width: 85%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #6a11cb;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #dddddd;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
