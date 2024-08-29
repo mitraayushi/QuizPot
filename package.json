@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "node server.js",
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
     "clean": "npx hardhat clean",
