@@ -10,7 +10,8 @@
     "clean": "npx hardhat clean",
     "deploy:hh": "  ",
     "deploy:opencampus": "npx hardhat run --network opencampus scripts/deploy.ts",
-    "deploy:transfer": "npx hardhat run --network opencampus scripts/existing_contract_use.ts"
+    "deploy:transfer": "npx hardhat run --network aia scripts/existing_contract_use.ts",
+    "deploy:aia": "npx hardhat run --network aia scripts/deploy.ts"
   },
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",

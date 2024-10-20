@@ -17,16 +17,27 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
-    opencampus: {
-      url: `https://open-campus-codex-sepolia.drpc.org/`,
+    // opencampus: {
+    //   url: `https://open-campus-codex-sepolia.drpc.org/`,
+    //   accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    // },
+    // scrollTestnet: {
+    //   url: process.env.SCROLL_TESTNET_URL || "",
+    //   chainId: 534351,
+    //   accounts:
+    //     process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    // },
+    neoTestnet: {
+      url: `https://testnet.rpc.banelabs.org`,
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      chainId: 12227332,
+      gasPrice: 60000000000,
     },
-    scrollTestnet: {
-      url: process.env.SCROLL_TESTNET_URL || "",
-      chainId: 534351,
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
+    aia: {
+      url: 'https://aia-dataseed1-testnet.aiachain.org',
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      chainId: 1320,
+    }
   },
 };
 
