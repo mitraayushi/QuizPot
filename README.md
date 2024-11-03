@@ -7,9 +7,9 @@ npm install
 
 Add this token as manually into your wallet QPT
 
-Contract Address = 0xc4D12645D522D3dc1BDf67Bcb04f1B4a8EbDc918
+Contract Address = 0x0cDD70427F8C2C8EFe20e52bFD8ca50a697cf36c
 
-Verify this Contract -> [Verify QPT](https://testnet.aiascan.com/token/0xc4D12645D522D3dc1BDf67Bcb04f1B4a8EbDc918)
+Verify this Contract -> [Verify QPT](https://testnet.aiascan.com/token/0x0cDD70427F8C2C8EFe20e52bFD8ca50a697cf36c)
 
 ---
 

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuizPot</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+
   </head>
   <body>
     <!-- Home Page -->
@@ -48,28 +50,28 @@
   </body>
   <script>
     // const claimAmtEle = document.getElementById("deduct-amount");
-    const withdraw = () => {
-      const walletEle = document.getElementById("wallet-address");
-      localStorage.setItem("clientAddress", walletEle.value);
-      //   console.log("hellooo this is withdraw", claimAmtEle.innerText);
+    // const withdraw = () => {
+    //   const walletEle = document.getElementById("wallet-address");
+    //   localStorage.setItem("clientAddress", walletEle.value);
+    //   //   console.log("hellooo this is withdraw", claimAmtEle.innerText);
 
-      const claimAmt = document
-        .getElementById("result-text")
-        .textContent.replace("%", "");
-      console.log(claimAmt, walletEle.value);
-      const clientAddress = localStorage.getItem("clientAddress");
+    //   const claimAmt = document
+    //     .getElementById("result-text")
+    //     .textContent.replace("%", "");
+    //   console.log(claimAmt, walletEle.value);
+    //   const clientAddress = localStorage.getItem("clientAddress");
 
-      fetch("/withdraw", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          clientAddress,
-          claimAmt: claimAmt,
-        }),
-      });
-      //   claimAmtEle.innerText = 0;
-    };
+    //   fetch("/withdraw", {
+    //     method: "POST",
+    //     headers: {
+    //       "content-type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       clientAddress,
+    //       claimAmt: claimAmt,
+    //     }),
+    //   });
+    //   //   claimAmtEle.innerText = 0;
+    // };
   </script>
 </html>
